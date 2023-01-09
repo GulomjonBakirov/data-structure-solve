@@ -1,13 +1,21 @@
 package main
 
 import (
+	"fmt"
 	"leetcode-ds/array"
 )
 
 func main() {
-	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+	nums1 := []int{0}
+	m := 0
+	nums2 := []int{1}
+	n := 1
 
 	// result := array.MaxSubArray(nums)
-	array.ContainsDuplicate(nums)
-	// fmt.Println("Solve: ", result)
+	// array.ContainsDuplicate(nums)
+
+	// result := array.TwoSum(nums, target)
+	result := array.Merge(nums1, m, nums2, n)
+	fmt.Println("Solve: ", result)
+
 }
