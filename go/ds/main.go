@@ -16,11 +16,12 @@ func main() {
 	// result := array.Intersect([]int{1, 2, 2, 1}, []int{2, 2})
 	// result := array.GetRow(3)
 	// result := stringmod.FirstUniqChar("ssaalom")
-	ll := &linkedlist.Node{Val: 3}
-	ll2 := &linkedlist.Node{Val: 1}
-	ll.Next = &linkedlist.Node{Val: 3}
+	ll := &linkedlist.Node{Val: 1}
+	fmt.Println(ll)
+	ll.Next = &linkedlist.Node{Val: 2}
 	ll.Next.Next = &linkedlist.Node{Val: 3}
-	ll.Next.Next.Next = &linkedlist.Node{Val: 3}
+	ll.Next.Next.Next = &linkedlist.Node{Val: 4}
+	ll2 := &linkedlist.Node{Val: 1}
 	ll2.Next = &linkedlist.Node{Val: 3}
 	ll2.Next.Next = &linkedlist.Node{Val: 4}
 	// ll.Append(1)
@@ -30,7 +31,14 @@ func main() {
 	// ll2.Append(3)
 	// ll2.Append(4)
 	// result := linkedlist.MergeTwoLinkedList(ll, ll2)
-	result := linkedlist.RemoveElements(ll, 3)
+	// result := linkedlist.RemoveElements(ll, 3)
+	for ll != nil {
+		fmt.Printf("%v -> ", ll.Val)
+		ll = ll.Next
+	}
+	fmt.Println("nil")
+
+	result := linkedlist.ReverseList(ll)
 
 	for result != nil {
 		fmt.Printf("%v -> ", result.Val)
