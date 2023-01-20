@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	linkedlist "leetcode-ds/LinkedList"
+	"leetcode-ds/tree"
 )
 
 func main() {
@@ -38,12 +39,14 @@ func main() {
 	// }
 	// fmt.Println("nil")
 
-	result := linkedlist.DeleteDuplicates(ll)
+	root := tree.NewNode(1)
+	root.Right = tree.NewNode(3)
+	root.Right.Left = tree.NewNode(4)
 
-	for result != nil {
-		fmt.Printf("%v -> ", result.Val)
-		result = result.Next
-	}
-	fmt.Println("nil")
+	// fmt.Println("In order")
+	// tree.InOrder(root)
 
+	fmt.Println("Pre order")
+	result := tree.InOrderBinaryTree(root)
+	fmt.Println("Result: ", result)
 }
