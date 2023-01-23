@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	linkedlist "leetcode-ds/LinkedList"
-	"leetcode-ds/tree"
+	"leetcode-ds/heap"
 )
 
 func main() {
@@ -39,14 +39,22 @@ func main() {
 	// }
 	// fmt.Println("nil")
 
-	root := tree.NewNode(1)
-	root.Right = tree.NewNode(3)
-	root.Right.Left = tree.NewNode(4)
+	// root := tree.NewNode(1)
+	// root.Right = tree.NewNode(3)
+	// root.Right.Left = tree.NewNode(4)
 
 	// fmt.Println("In order")
 	// tree.InOrder(root)
 
-	fmt.Println("Pre order")
-	result := tree.InOrderBinaryTree(root)
-	fmt.Println("Result: ", result)
+	// fmt.Println("Pre order")
+	// result := tree.InOrderBinaryTree(root)
+	// fmt.Println("Result: ", result)
+
+	m := &heap.MaxHeap{}
+	buildHeap := []int{10, 20, 30}
+	for i := 0; i < len(buildHeap); i++ {
+		m.Insert(buildHeap[i])
+		fmt.Println(m)
+	}
+
 }
