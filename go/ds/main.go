@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	linkedlist "leetcode-ds/LinkedList"
+	"leetcode-ds/array"
 	"leetcode-ds/tree"
 )
 
@@ -45,8 +46,6 @@ func main() {
 
 	// fmt.Println("In order")
 	// tree.InOrder(root)
-
-	fmt.Println("Pre order")
-	result := tree.InOrderBinaryTree(root)
-	fmt.Println("Result: ", result)
+	array.SortColors([]int{1, 2, 3, 1, 2})
+	// fmt.Println(result)
 }
