@@ -3,12 +3,8 @@ package main
 import (
 	"fmt"
 	linkedlist "leetcode-ds/LinkedList"
-<<<<<<< HEAD
 	"leetcode-ds/array"
-	"leetcode-ds/tree"
-=======
 	"leetcode-ds/heap"
->>>>>>> bbbadddf6b9ff28820222beb5419dedf3c0f12ec
 )
 
 func main() {
